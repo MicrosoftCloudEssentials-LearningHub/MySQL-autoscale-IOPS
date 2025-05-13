@@ -51,7 +51,7 @@ Review [the script](./scripts/enable_autoscale_iops_byRG.py), and download it to
 > - For each server, retrieving its resource group.  <br/>
 > - Applying the update if the server is in a supported tier (General Purpose or Business Critical).  <br/>
 
-Review [the script](./scripts/enable_autoscale_iops.py), and download it to your local machine.
+Review [the script](./scripts/enable_autoscale_iops_across_subscription.py), and download it to your local machine.
 
 > Example: enabling Autoscale IOPS on 4 different servers, each hosted in different resource group and same subscription.
 
