@@ -38,6 +38,10 @@ Last updated: 2025-05-13
 
 Review [the script](./scripts/enable_autoscale_iops_byRG.py), and download it to your local machine.
 
+> Example: enabling Autoscale IOPS on two different servers, each hosted in same resource group and same subscription.
+
+<img width="550" alt="image" src="" />
+
 ## Across a Subscription
 
 > You can also enable autoscale IOPS across an entire subscription, it requires: <br/>
@@ -47,15 +51,15 @@ Review [the script](./scripts/enable_autoscale_iops_byRG.py), and download it to
 
 Review [the script](./scripts/enable_autoscale_iops.py), and download it to your local machine.
 
+> Example: enabling Autoscale IOPS on 4 different servers, each hosted in different resource group and same subscription.
+
+<img width="550" alt="image" src="" />
+
 ## How to execute it Script to Enable Autoscale IOPS
 
 1. Download [the script](./scripts/) to be used to your local machine or a cloud shell environment.
 2. Make sure you're logged in: `az login`
-4. Run the script: `py enable_autoscale_iops.py`
-
-> Example: enabling Autoscale IOPS on three different servers, each hosted in a separate resource group but under the same subscription.
-
-<img width="550" alt="image" src="https://github.com/user-attachments/assets/22aa763d-b358-441a-b5b9-aa0197ce680d" />
+4. Run the script: `python {script-name}.py`
 
 <div align="center">
   <h3 style="color: #4CAF50;">Total Visitors</h3>
