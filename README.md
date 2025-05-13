@@ -17,6 +17,7 @@ Last updated: 2025-05-13
 - [Storage IOPS in Azure Database for MySQL - Flexible Server](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/concepts-storage-iops#how-do-i-know-that-iops-have-scaled-up-and-scaled-down-when-the-server-is-using-the-autoscale-iops-feature-can-i-monitor-iops-usage-for-my-server)
 - [Azure Database for MySQL - Flexible Server service tiers](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/concepts-service-tiers-storage#service-tiers-size-and-server-types)
 - [Autoscale IOPS for Azure Database for MySQL - Flexible Server - General Availability](https://techcommunity.microsoft.com/blog/adformysql/autoscale-iops-for-azure-database-for-mysql---flexible-server---general-availabi/3884602)
+- [Azure Database for MySQL pricing](https://azure.microsoft.com/en-us/pricing/details/mysql/)
 
 </details>
 
