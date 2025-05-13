@@ -33,8 +33,8 @@ Last updated: 2025-05-13
 > - Automatically retrieves your **Azure subscription ID** using the Azure CLI. <br/>
 > - List all Resource Groups in current subscription ID. <br/>
 > - Prompts you only for the **resource group name**. <br/>
-> - Lists all MySQL Flexible Servers in that resource group. <br/>
-> - Sends a `PATCH request`` to enable `autoIoScaling` for each server using the `Azure REST API`
+> - Lists all MySQL Flexible Servers in that resource group. Few conditions were added to review which servers are available for update. 
+> - Sends a `PATCH request` to enable `autoIoScaling` for each server using the `Azure REST API`
 
 Review [the script](./scripts/enable_autoscale_iops_byRG.py), and download it to your local machine.
 
@@ -47,9 +47,9 @@ Review [the script](./scripts/enable_autoscale_iops_byRG.py), and download it to
 
 Review [the script](./scripts/enable_autoscale_iops.py), and download it to your local machine.
 
-## How to execute it Azure CLI Script to Enable Autoscale IOPS
+## How to execute it Script to Enable Autoscale IOPS
 
-1. Download [the script](./scripts/enable_autoscale_iops.py) to your local machine or a cloud shell environment.
+1. Download [the script](./scripts/) to be used to your local machine or a cloud shell environment.
 2. Make sure you're logged in: `az login`
 4. Run the script: `py enable_autoscale_iops.py`
 
