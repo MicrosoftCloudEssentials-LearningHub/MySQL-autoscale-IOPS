@@ -45,7 +45,7 @@ Review [the script](./scripts/enable_autoscale_iops_byRG.py), and download it to
 
 ## Across a Subscription
 
-> You can also enable autoscale IOPS across an entire subscription, it requires: <br/>
+> You can also enable autoscale IOPS across an entire subscription, overall process: <br/>
 >
 > - Listing all MySQL Flexible Servers in the subscription. <br/>
 > - For each server, retrieving its resource group.  <br/>
