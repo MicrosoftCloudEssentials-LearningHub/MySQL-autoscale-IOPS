@@ -23,7 +23,7 @@ Last updated: 2025-05-13
 
     <img width="550" alt="image" src="https://github.com/user-attachments/assets/fa74f47c-bef2-4ad3-8b0f-2ee50813c486" />
 
--  [Install Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) to work with both Terraform and Azure commands.
+-  [Install Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli).
 
     <img width="550" alt="image" src="https://github.com/user-attachments/assets/3f552ecc-8e07-453a-9655-8bb5a89e1791" />
 
