@@ -29,7 +29,7 @@ Last updated: 2025-05-13
 
 ## By Resource Group
 
-> Overall process: <br/> (./scripts/enable_autoscale_iops_byRG.py)
+> Overall process: <br/> 
 >
 > - Automatically retrieves your **Azure subscription ID** using the Azure CLI. <br/>
 > - List all Resource Groups in current subscription ID. <br/>
@@ -41,11 +41,11 @@ Review [the script](./scripts/enable_autoscale_iops_byRG.py), and download it to
 
 > Example: enabling Autoscale IOPS on two different servers, each hosted in same resource group and same subscription.
 
-<img width="550" alt="image" src="" />
+<https://github.com/user-attachments/assets/4c087afe-6fa1-40cb-bb2f-ef912edb974d>
 
 ## Across a Subscription
 
-> You can also enable autoscale IOPS across an entire subscription, it requires: <br/>
+> You can also enable autoscale IOPS across an entire subscription, overall process: <br/>
 >
 > - Listing all MySQL Flexible Servers in the subscription. <br/>
 > - For each server, retrieving its resource group.  <br/>
