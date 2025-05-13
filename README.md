@@ -57,6 +57,8 @@ Last updated: 2025-05-13
 
 ## How to enable IOPS (script)
 
+> [Automate the activation of Autoscale IOPS using Python and the Azure REST API](./autoscaleMultiple-IOPS/), ideal for managing multiple servers across resource groups or entire subscriptions. This feature is only supported on General Purpose and Business Critical tiers, and currently not available via Azure CLI or PowerShell.
+
 ## How to Monitor IOPS Scaling
 
 > How I know if the IOPS have scaled up or down when the server's using the autoscale IOPS feature? You can use the `metrics available in Azure Monitor`. 
