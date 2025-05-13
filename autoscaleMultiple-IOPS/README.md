@@ -55,7 +55,7 @@ Review [the script](./scripts/enable_autoscale_iops_across_subscription.py), and
 
 > Example: enabling Autoscale IOPS on different servers, each hosted in different resource group and same subscription.
 
-https://github.com/user-attachments/assets/7c06f457-d1c5-4277-ab1f-cee6621b6871
+<https://github.com/user-attachments/assets/7c06f457-d1c5-4277-ab1f-cee6621b6871>
 
 ## How to execute it Script to Enable Autoscale IOPS
 
