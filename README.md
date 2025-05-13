@@ -7,7 +7,7 @@ Costa Rica
 [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
 [brown9804](https://github.com/brown9804)
 
-Last updated: 2025-05-13
+Last updated: 2025-05-12
 
 ----------
 
@@ -20,7 +20,6 @@ Last updated: 2025-05-13
 
 </details>
 
-
 <details>
 <summary><b>Table of Content</b> (Click to expand)</summary>
 
@@ -32,6 +31,7 @@ Last updated: 2025-05-13
 </details>
 
 > When Autoscale IOPS is enabled for Azure Database for MySQL (Flexible Server), the IOPS (Input/Output Operations Per Second) automatically scale both up and down based on your workload demands. <br/>
+>
 > - During `high demand`, the system `increases IOPS` to maintain performance.
 > - During `low demand`, it `scales down` to reduce resource usage and cost.
 
@@ -43,7 +43,7 @@ Last updated: 2025-05-13
 4. Choose your subscription, resource group, and server name.
 5. Select the region, MySQL version, and workload type (e.g., Development, Production).
 
-     https://github.com/user-attachments/assets/5b500aea-538d-4ddb-88b6-e0717a2d0fbe
+     <https://github.com/user-attachments/assets/5b500aea-538d-4ddb-88b6-e0717a2d0fbe>
 
 ## How to enable IOPS (manual approach)
 
@@ -53,7 +53,7 @@ Last updated: 2025-05-13
 4. In the IOPS section, select the option `Autoscale IOPS`
 5. Click `Save` to apply the changes.
 
-     https://github.com/user-attachments/assets/9e2983b3-3839-4ad3-8ab8-ccbb698f3228
+     <https://github.com/user-attachments/assets/9e2983b3-3839-4ad3-8ab8-ccbb698f3228>
 
 ## How to enable IOPS (script)
 
@@ -67,7 +67,7 @@ Last updated: 2025-05-13
           
      <img width="550" alt="image" src="https://github.com/user-attachments/assets/f08afb04-e271-4ac3-8594-e3e98a9bfd2e" />
 
-   - Choose the ` Storage IO` metric (both percent and count).
+   - Choose the `Storage IO` metric (both percent and count).
 
      <img width="550" alt="image" src="https://github.com/user-attachments/assets/ca585f55-e943-413d-9477-f26c099a1e66" />
 
@@ -82,11 +82,9 @@ Last updated: 2025-05-13
    - You can also monitor `IO utilization percentage` to see how close your server is to its current IOPS limit.
 3. **Enable Alerts (Optional)**: You can set up `alerts` in Azure Monitor to notify you when IOPS usage crosses certain thresholds, which can help you track scaling events in real time.
 
-   https://github.com/user-attachments/assets/19b96128-e37f-40b4-8e23-8a5384bc6686
-
+   <https://github.com/user-attachments/assets/19b96128-e37f-40b4-8e23-8a5384bc6686>
 
 <div align="center">
   <h3 style="color: #4CAF50;">Total Visitors</h3>
   <img src="https://profile-counter.glitch.me/brown9804/count.svg" alt="Visitor Count" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
 </div>
-
