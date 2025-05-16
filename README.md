@@ -1,4 +1,4 @@
-# Autoscale IOPS - Overview 
+# Azure MySQL Autoscale IOPS - Overview 
 
 > IOPS (Input/Output Operations Per Second)
 
