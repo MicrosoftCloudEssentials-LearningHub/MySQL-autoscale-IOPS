@@ -5,7 +5,7 @@ Costa Rica
 [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
 [brown9804](https://github.com/brown9804)
 
-Last updated: 2025-05-13
+Last updated: 2025-07-16
 
 ----------
 
@@ -20,7 +20,6 @@ Last updated: 2025-05-13
 - [How to execute it Script to Enable Autoscale IOPS](#how-to-execute-it-script-to-enable-autoscale-iops)
 
 </details>
-
 
 > [!NOTE]
 > Enable Autoscale IOPS via REST API, as now this is the only way to automate enabling Autoscale IOPS since, Azure CLI and PowerShell do not support this setting yet.
@@ -74,7 +73,9 @@ Review [the script](./scripts/enable_autoscale_iops_across_subscription.py), and
 2. Make sure you're logged in: `az login`
 4. Run the script: `python {script-name}.py`
 
+<!-- START BADGE -->
 <div align="center">
-  <h3 style="color: #4CAF50;">Total Visitors</h3>
-  <img src="https://profile-counter.glitch.me/brown9804/count.svg" alt="Visitor Count" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
+  <img src="https://img.shields.io/badge/Total%20views-1153-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-16</p>
 </div>
+<!-- END BADGE -->
