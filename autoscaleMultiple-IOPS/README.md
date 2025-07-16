@@ -21,7 +21,6 @@ Last updated: 2025-07-16
 
 </details>
 
-
 > [!NOTE]
 > Enable Autoscale IOPS via REST API, as now this is the only way to automate enabling Autoscale IOPS since, Azure CLI and PowerShell do not support this setting yet.
 
