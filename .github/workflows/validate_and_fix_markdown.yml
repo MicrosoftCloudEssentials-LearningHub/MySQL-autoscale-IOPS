@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   validate-and-fix-markdown:
@@ -27,7 +28,7 @@ jobs:
         run: npm install -g markdownlint-cli
 
       - name: Lint and Fix Markdown files
-        run: markdownlint '**/*.md' --fix --config .github/.markdownlint.json --ignore GPT-RAG_SolutionAccelerator/
+        run: markdownlint '**/*.md' --fix --config .github/.markdownlint.json 
 
       - name: Configure Git
         run: |
