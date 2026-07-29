@@ -1,30 +1,22 @@
 # Autoscale IOPS for multiple Azure MySQL Flexible Server
 
-Costa Rica
+This automation uses [Python 3.7 or later](https://www.python.org/downloads/source/).
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
-
-Last updated: 2025-07-16
-
-----------
-
-> Using [Python 3.7+](https://www.python.org/downloads/source/)
-
-<details>
+<details markdown="1">
 <summary><b>Table of Content</b> (Click to expand)</summary>
 
 - [Pre-requisites](#pre-requisites)
 - [By Resource Group](#by-resource-group)
 - [Across a Subscription](#across-a-subscription)
-- [How to execute it Script to Enable Autoscale IOPS](#how-to-execute-it-script-to-enable-autoscale-iops)
+- [Run the automation scripts](#run-the-automation-scripts)
 
 </details>
 
-> [!NOTE]
-> Enable Autoscale IOPS via REST API, as now this is the only way to automate enabling Autoscale IOPS since, Azure CLI and PowerShell do not support this setting yet.
+!!! note
+    Use the Azure REST API to automate Autoscale IOPS. Azure CLI and PowerShell do not currently support this setting.
 
-> [!IMPORTANT]
-> Autoscale IOPS is `only available` for the `General Purpose` and `Business Critical tiers`. `Burstable tier` (B-series) servers (e.g., B1ms) `do not support autoscale IOPS`.
+!!! warning
+    Autoscale IOPS is available only for the `General Purpose` and `Business Critical` tiers. Burstable B-series servers such as B1ms do not support it.
 
 ## Pre-requisites
 
@@ -46,11 +38,14 @@ Last updated: 2025-07-16
 > - Lists all MySQL Flexible Servers in that resource group. Few conditions were added to review which servers are available for update. 
 > - Sends a `PATCH request` to enable `autoIoScaling` for each server using the `Azure REST API`
 
-Review [the script](./scripts/enable_autoscale_iops_byRG.py), and download it to your local machine.
+Review the [resource-group automation script](https://github.com/Cloud2BR-MSFTLearningHub/MySQL-autoscale-IOPS/blob/main/autoscaleMultiple-IOPS/scripts/enable_autoscale_iops_byRG.py), then download it to your local machine.
 
 > Example: enabling Autoscale IOPS on two different servers, each hosted in same resource group and same subscription.
 
-<https://github.com/user-attachments/assets/4c087afe-6fa1-40cb-bb2f-ef912edb974d>
+<video controls width="700" aria-label="Enable Autoscale IOPS across servers in a resource group">
+  <source src="https://github.com/user-attachments/assets/4c087afe-6fa1-40cb-bb2f-ef912edb974d" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Across a Subscription
 
@@ -60,21 +55,17 @@ Review [the script](./scripts/enable_autoscale_iops_byRG.py), and download it to
 > - For each server, retrieving its resource group.  <br/>
 > - Applying the update if the server is in a supported tier (General Purpose or Business Critical).  <br/>
 
-Review [the script](./scripts/enable_autoscale_iops_across_subscription.py), and download it to your local machine.
+Review the [subscription automation script](https://github.com/Cloud2BR-MSFTLearningHub/MySQL-autoscale-IOPS/blob/main/autoscaleMultiple-IOPS/scripts/enable_autoscale_iops_across_subscription.py), then download it to your local machine.
 
 > Example: enabling Autoscale IOPS on different servers, each hosted in different resource group and same subscription.
 
-<https://github.com/user-attachments/assets/7c06f457-d1c5-4277-ab1f-cee6621b6871>
+<video controls width="700" aria-label="Enable Autoscale IOPS across a subscription">
+  <source src="https://github.com/user-attachments/assets/7c06f457-d1c5-4277-ab1f-cee6621b6871" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-## How to execute it Script to Enable Autoscale IOPS
+## Run the automation scripts
 
-1. Download [the script](./scripts/) to be used to your local machine or a cloud shell environment.
+1. Download the [automation scripts](https://github.com/Cloud2BR-MSFTLearningHub/MySQL-autoscale-IOPS/tree/main/autoscaleMultiple-IOPS/scripts) to your local machine or Cloud Shell environment.
 2. Make sure you're logged in: `az login`
-4. Run the script: `python {script-name}.py`
-
-<!-- START BADGE -->
-<div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1153-limegreen" alt="Total views">
-  <p>Refresh Date: 2025-07-16</p>
-</div>
-<!-- END BADGE -->
+3. Run the script: `python {script-name}.py`

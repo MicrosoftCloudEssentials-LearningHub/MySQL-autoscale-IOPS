@@ -1,16 +1,8 @@
 # Azure MySQL Autoscale IOPS - Overview 
 
-> IOPS (Input/Output Operations Per Second)
+IOPS stands for **Input/Output Operations Per Second**.
 
-Costa Rica
-
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
-
-Last updated: 2025-07-16
-
-----------
-
-<details>
+<details markdown="1">
 <summary><b>List of References</b> (Click to expand)</summary>
 
 - [Storage IOPS in Azure Database for MySQL - Flexible Server](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/concepts-storage-iops#how-do-i-know-that-iops-have-scaled-up-and-scaled-down-when-the-server-is-using-the-autoscale-iops-feature-can-i-monitor-iops-usage-for-my-server)
@@ -20,7 +12,7 @@ Last updated: 2025-07-16
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><b>Table of Content</b> (Click to expand)</summary>
 
 - [How to provision](#how-to-provision)
@@ -30,10 +22,10 @@ Last updated: 2025-07-16
 
 </details>
 
-> When Autoscale IOPS is enabled for Azure Database for MySQL (Flexible Server), the IOPS (Input/Output Operations Per Second) automatically scale both up and down based on your workload demands. <br/>
->
-> - During `high demand`, the system `increases IOPS` to maintain performance.
-> - During `low demand`, it `scales down` to reduce resource usage and cost.
+When Autoscale IOPS is enabled for Azure Database for MySQL Flexible Server, IOPS automatically scale up and down based on workload demand:
+
+- During `high demand`, the system `increases IOPS` to maintain performance.
+- During `low demand`, it `scales down` to reduce resource usage and cost.
 
 ## How to provision 
 
@@ -43,7 +35,10 @@ Last updated: 2025-07-16
 4. Choose your subscription, resource group, and server name.
 5. Select the region, MySQL version, and workload type (e.g., Development, Production).
 
-     <https://github.com/user-attachments/assets/5b500aea-538d-4ddb-88b6-e0717a2d0fbe>
+<video controls width="700" aria-label="Provision an Azure Database for MySQL Flexible Server">
+  <source src="https://github.com/user-attachments/assets/5b500aea-538d-4ddb-88b6-e0717a2d0fbe" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## How to enable IOPS (manual approach)
 
@@ -53,42 +48,46 @@ Last updated: 2025-07-16
 4. In the IOPS section, select the option `Autoscale IOPS`
 5. Click `Save` to apply the changes.
 
-     <https://github.com/user-attachments/assets/9e2983b3-3839-4ad3-8ab8-ccbb698f3228>
+<video controls width="700" aria-label="Configure Autoscale IOPS manually">
+  <source src="https://github.com/user-attachments/assets/9e2983b3-3839-4ad3-8ab8-ccbb698f3228" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## How to enable IOPS (script)
 
-> [Automate the activation of Autoscale IOPS using Python and the Azure REST API](./autoscaleMultiple-IOPS/), ideal for managing multiple servers across resource groups or entire subscriptions. This feature is only supported on General Purpose and Business Critical tiers, and currently not available via Azure CLI or PowerShell.
+[Automate Autoscale IOPS using Python and the Azure REST API](automation.md) across resource groups or an entire subscription. Autoscale IOPS is supported only on the General Purpose and Business Critical tiers and cannot currently be enabled through Azure CLI or PowerShell.
 
 ## How to Monitor IOPS Scaling
 
-> How I know if the IOPS have scaled up or down when the server's using the autoscale IOPS feature? You can use the `metrics available in Azure Monitor`. 
+Use the metrics available in Azure Monitor to determine when IOPS scale up or down.
 
-1. **Use Azure Monitor Metrics**:
-   - Go to your server in the [Azure portal](https://portal.azure.com/)
-   - Go to the `Monitoring` section and select `Metrics`.
-          
-     <img width="550" alt="image" src="https://github.com/user-attachments/assets/f08afb04-e271-4ac3-8594-e3e98a9bfd2e" />
+### 1. Use Azure Monitor Metrics
 
-   - Choose the `Storage IO` metric (both percent and count).
+- Go to your server in the [Azure portal](https://portal.azure.com/).
+- Open `Monitoring`, then select `Metrics`.
 
-     <img width="550" alt="image" src="https://github.com/user-attachments/assets/ca585f55-e943-413d-9477-f26c099a1e66" />
+<img width="550" alt="Azure Monitor Metrics navigation" src="https://github.com/user-attachments/assets/f08afb04-e271-4ac3-8594-e3e98a9bfd2e">
 
-   - Set a `custom time range` to observe trends over time.
+- Choose the `Storage IO` metric in both percentage and count formats.
 
-     | Storage IO Count | Storage IO Percent |
-     | --- | --- | 
-     | <img width="550" alt="image" src="https://github.com/user-attachments/assets/9be08df9-3fe6-4010-9e75-487a325d0acb" /> | <img width="550" alt="image" src="https://github.com/user-attachments/assets/c5f7f45d-303d-48ce-82a4-00685da29849" /> |
+  <img width="550" alt="Storage IO metric selection" src="https://github.com/user-attachments/assets/ca585f55-e943-413d-9477-f26c099a1e66">
 
-2. **Look for Scaling Patterns**:
-   - If you see `sudden increases or decreases` in the IOPS metric that correlate with workload changes, this indicates that autoscale IOPS has adjusted the performance level.
-   - You can also monitor `IO utilization percentage` to see how close your server is to its current IOPS limit.
-3. **Enable Alerts (Optional)**: You can set up `alerts` in Azure Monitor to notify you when IOPS usage crosses certain thresholds, which can help you track scaling events in real time.
+- Set a `custom time range` to observe trends over time.
 
-   <https://github.com/user-attachments/assets/19b96128-e37f-40b4-8e23-8a5384bc6686>
+  | Storage IO Count | Storage IO Percent |
+  | --- | --- |
+  | <img width="550" alt="Storage IO count metric" src="https://github.com/user-attachments/assets/9be08df9-3fe6-4010-9e75-487a325d0acb"> | <img width="550" alt="Storage IO percentage metric" src="https://github.com/user-attachments/assets/c5f7f45d-303d-48ce-82a4-00685da29849"> |
 
-<!-- START BADGE -->
-<div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1153-limegreen" alt="Total views">
-  <p>Refresh Date: 2025-07-16</p>
-</div>
-<!-- END BADGE -->
+### 2. Look for Scaling Patterns
+
+- Sudden increases or decreases that correlate with workload changes indicate that Autoscale IOPS adjusted the performance level.
+- Monitor `IO utilization percentage` to see how close the server is to its current IOPS limit.
+
+### 3. Enable Alerts (Optional)
+
+Configure Azure Monitor alerts to notify you when IOPS usage crosses selected thresholds.
+
+<video controls width="700" aria-label="Configure Autoscale IOPS monitoring and alerts">
+  <source src="https://github.com/user-attachments/assets/19b96128-e37f-40b4-8e23-8a5384bc6686" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
